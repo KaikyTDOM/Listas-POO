@@ -20,6 +20,10 @@ public class Cliente{
         if(numeroConta.length() == 8 && numeroConta.charAt(6) == '-'){
             this.numeroConta = numeroConta;
         }
+        else{
+            this.numeroConta = "";
+            System.out.println("Número da conta inválida!");
+        }
     }
 
     public String getNumeroConta(){
@@ -29,6 +33,10 @@ public class Cliente{
     public void setNumeroAgencia(String numeroAgencia){
         if(numeroAgencia.length() == 6 && numeroAgencia.charAt(4) == '-'){
             this.numeroAgencia = numeroAgencia;
+        }
+        else{
+            this.numeroAgencia = "";
+            System.out.println("Número da agência inválida!");
         }
     }
 
@@ -41,6 +49,7 @@ public class Cliente{
             this.nome = nome;
         }
         else{
+            this.nome = "";
             System.out.println("O nome excedeu o limite de caracteres!");
         }
     }
@@ -58,16 +67,16 @@ public class Cliente{
         }
     }
 
-    public float getSaldo() {
+    public float getSaldo(){
         return saldo;
     }
 
-    public float depositar(float x){
-        return this.saldo += x;
+    public void depositar(float x){
+        this.setSaldo(this.saldo + x);
     }
 
-    public float sacar(float x){
-        return this.saldo -= x;
+    public void sacar(float x){
+        this.setSaldo(this.saldo - x);
     }
 
     public String mostrar(){

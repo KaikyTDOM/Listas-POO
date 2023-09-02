@@ -9,7 +9,14 @@ public class Pc{
 
     }
 
-    public void setMarca(String marca) {
+    public Pc(String marca, String modelo, String processador, int ram, int disco){
+        this.setMarca(marca);
+        this.setModelo(modelo);
+        this.setProcessador(processador);
+        this.setRam(ram);
+        this.setDisco(disco);
+    }
+    public final void setMarca(String marca) {
         this.marca = marca;
     }
 
@@ -17,7 +24,7 @@ public class Pc{
         return marca;
     }
 
-    public void setModelo(String modelo) {
+    public final void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
@@ -25,7 +32,7 @@ public class Pc{
         return modelo;
     }
 
-    public void setProcessador(String processador){
+    public final void setProcessador(String processador){
         this.processador = processador;
     }
 
@@ -33,7 +40,7 @@ public class Pc{
         return processador;
     }
 
-    public void setRam(int ram) {
+    public final void setRam(int ram) {
         if((ram > 0) && (ram % 2 == 0)){
             this.ram = ram;
         }
@@ -46,7 +53,7 @@ public class Pc{
         return this.ram;
     }
 
-    public void setDisco(int disco) {
+    public final void setDisco(int disco) {
         if(disco % 128 == 0){
             this.disco = disco;
         }
@@ -57,5 +64,14 @@ public class Pc{
 
     public int getDisco() {
         return disco;
+    }
+
+    @Override
+    public String toString(){
+        return ("\nMarca: " + this.marca +
+                "\nModelo: " + this.modelo +
+                "\nProcessador: " + this.processador +
+                "\nRam: " + this.ram +
+                "\nDisco: " + this.disco);
     }
 }

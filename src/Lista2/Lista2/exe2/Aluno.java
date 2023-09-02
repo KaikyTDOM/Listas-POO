@@ -41,11 +41,11 @@ public class Aluno{
         }
     }
 
-    public String getNome() {
+    public String getNome(){
         return nome;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(int idade){
         if(idade >= 0){
             this.idade = idade;
         }
@@ -54,11 +54,11 @@ public class Aluno{
         }
     }
 
-    public int getIdade() {
+    public int getIdade(){
         return idade;
     }
 
-    public void setP1(float p1) {
+    public void setP1(float p1){
         if(p1 >= 0){
             this.p1 = p1;
         }
@@ -67,11 +67,11 @@ public class Aluno{
         }
     }
 
-    public float getP1() {
+    public float getP1(){
         return p1;
     }
 
-    public void setP2(float p2) {
+    public void setP2(float p2){
         if(p2 >= 0){
             this.p2 = p2;
         }
